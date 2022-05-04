@@ -1,11 +1,19 @@
 import { Platform } from "../../types";
 
+declare global {
+  interface Window {
+    isDesktopApp: boolean;
+    isNativeApp: boolean;
+    electron: any;
+  }
+}
+
 export const usePlatform = (): Platform => {
   let platform: Platform = Platform.web;
 
-  if ((window as any).isNativeApp) {
+  if (window.isNativeApp) {
     platform = Platform.mobile;
-  } else if ((window as any).isDesktopApp) {
+  } else if (window.electron) {
     platform = Platform.desktop;
   }
 
