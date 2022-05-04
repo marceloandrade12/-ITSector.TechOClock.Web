@@ -20,8 +20,9 @@ function App() {
       />
       <header className="App-header">
         <img
-          src={"https://content.itsector.pt/hubfs/Tech-OClock-Logo-V1.png"}
-          className="App-logo"
+          src={
+            "https://content.itsector.pt/hubfs/Webinars-Tech-OClock-2022-Banner-Image.svg"
+          }
           alt="logo"
         />
         <p>ITSector Tech O'Clock Webinar</p>
