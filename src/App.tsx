@@ -1,7 +1,9 @@
 import React from "react";
 import "./App.css";
+import { usePlatform } from "./hooks";
 
 function App() {
+  const platform = usePlatform();
   return (
     <div className="App">
       <img
@@ -18,6 +20,7 @@ function App() {
           padding: "24px",
         }}
       />
+
       <header className="App-header">
         <img
           src={
@@ -25,8 +28,10 @@ function App() {
           }
           alt="logo"
         />
-        <p>ITSector Tech O'Clock Webinar</p>
-        Integração React em múltipla plataforma
+        <p>Integração React em múltipla plataforma</p>
+        <p style={{ fontSize: "20px" }}>
+          Current Platform: <b>{platform}</b>
+        </p>
       </header>
     </div>
   );
