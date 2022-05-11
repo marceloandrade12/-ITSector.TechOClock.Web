@@ -14,7 +14,7 @@ export const Button: React.FC<ButtonProps> = (props) => {
       components={{
         desktop: <ButtonDesktop {...props} />,
         web: <ButtonDesktop {...props} />,
-        mobile: "Mobile Button",
+        mobile: <ButtonDesktop {...props} />,
       }}
     />
   );
