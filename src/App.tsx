@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import { Button } from "./components/button";
 import { usePlatform } from "./hooks";
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <p style={{ fontSize: "20px" }}>
           Current Platform: <b>{platform}</b>
         </p>
+        <Button onClick={() => alert("location")} text={"Location"} />
       </header>
     </div>
   );
