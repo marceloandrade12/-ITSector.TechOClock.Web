@@ -5,6 +5,9 @@ declare global {
     isDesktopApp: boolean;
     isNativeApp: boolean;
     electron: any;
+    ReactNativeWebView: {
+      postMessage: (obj: any) => void;
+    };
   }
 }
 

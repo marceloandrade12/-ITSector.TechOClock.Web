@@ -5,6 +5,7 @@ import { ButtonDesktop } from "./button.desktop";
 export interface ButtonProps {
   onClick: () => void;
   text: string;
+  style?: React.CSSProperties;
 }
 
 export const Button: React.FC<ButtonProps> = (props) => {

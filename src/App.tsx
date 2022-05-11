@@ -1,10 +1,12 @@
 import React from "react";
 import "./App.css";
 import { Button } from "./components/button";
-import { usePlatform } from "./hooks";
+import { useNativeCommunication, usePlatform } from "./hooks";
 
 function App() {
   const platform = usePlatform();
+  const { openLocation, openContacts } = useNativeCommunication();
+
   return (
     <div className="App">
       <img
@@ -33,7 +35,12 @@ function App() {
         <p style={{ fontSize: "20px" }}>
           Current Platform: <b>{platform}</b>
         </p>
-        <Button onClick={() => alert("location")} text={"Location"} />
+        <Button onClick={openLocation} text={"Open Location"} />
+        <Button
+          onClick={openContacts}
+          text={"Open Contacts"}
+          style={{ marginTop: "10px" }}
+        />
       </header>
     </div>
   );

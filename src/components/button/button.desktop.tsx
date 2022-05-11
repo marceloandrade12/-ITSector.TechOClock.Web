@@ -1,7 +1,11 @@
 import React from "react";
 import { ButtonProps } from ".";
 
-export const ButtonDesktop: React.FC<ButtonProps> = ({ onClick, text }) => {
+export const ButtonDesktop: React.FC<ButtonProps> = ({
+  onClick,
+  text,
+  style,
+}) => {
   return (
     <button
       style={{
@@ -16,6 +20,7 @@ export const ButtonDesktop: React.FC<ButtonProps> = ({ onClick, text }) => {
         backgroundColor: "#4eb5f1",
         textAlign: "center",
         transition: "all 0.2s",
+        ...style,
       }}
       onClick={onClick}
     >
