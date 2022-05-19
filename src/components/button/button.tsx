@@ -1,6 +1,7 @@
 import React from "react";
 import { RenderComponent } from "../renderComponent";
 import { ButtonDesktop } from "./button.desktop";
+import { ButtonMobile } from "./button.mobile";
 
 export interface ButtonProps {
   /** Method to be handle when button is clicked */
@@ -17,7 +18,7 @@ export const Button: React.FC<ButtonProps> = (props) => {
       components={{
         desktop: <ButtonDesktop {...props} />,
         web: <ButtonDesktop {...props} />,
-        mobile: <ButtonDesktop {...props} />,
+        mobile: <ButtonMobile {...props} />,
       }}
     />
   );
