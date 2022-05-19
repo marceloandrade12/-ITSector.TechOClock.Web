@@ -3,8 +3,11 @@ import { RenderComponent } from "../renderComponent";
 import { ButtonDesktop } from "./button.desktop";
 
 export interface ButtonProps {
+  /** Method to be handle when button is clicked */
   onClick: () => void;
+  /** set the button text */
   text: string;
+  /** allow customize button */
   style?: React.CSSProperties;
 }
 

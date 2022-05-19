@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import { Button } from "./components/button";
 import { useNativeCommunication, usePlatform } from "./hooks";
+import { Platform } from "./types";
 
 function App() {
   const platform = usePlatform();
@@ -35,12 +36,17 @@ function App() {
         <p style={{ fontSize: "20px" }}>
           Current Platform: <b>{platform}</b>
         </p>
-        <Button onClick={openLocation} text={"Open Location"} />
-        <Button
-          onClick={openContacts}
-          text={"Open Contacts"}
-          style={{ marginTop: "10px" }}
-        />
+
+        {platform !== Platform.web && (
+          <>
+            <Button onClick={openLocation} text={"Open Location"} />
+            <Button
+              onClick={openContacts}
+              text={"Open Contacts"}
+              style={{ marginTop: "10px" }}
+            />
+          </>
+        )}
       </header>
     </div>
   );

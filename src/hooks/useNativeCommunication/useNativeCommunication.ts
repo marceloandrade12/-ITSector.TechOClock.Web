@@ -17,6 +17,7 @@ enum BRIDGE_ACTIONS {
 export const useNativeCommunication = (): UseNativeCommunicationOutput => {
   const platform = usePlatform();
 
+  /** Open Location Bridge Method */
   const handleOpenLocation = React.useCallback((): void => {
     try {
       switch (platform) {
@@ -37,6 +38,7 @@ export const useNativeCommunication = (): UseNativeCommunicationOutput => {
     }
   }, [platform]);
 
+  /** Open Contacts Bridge Method */
   const handleOpenContacts = React.useCallback((): void => {
     try {
       switch (platform) {
